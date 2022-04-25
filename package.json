@@ -1,6 +1,6 @@
 {
   "name": "@lsky/choose-port",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "index.js",
   "repository": "git@github.com:lsky-walt/choose-port.git",
   "author": "lsky-walt <lsky_walt@163.com>",
