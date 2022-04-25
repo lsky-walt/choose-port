@@ -5,6 +5,7 @@ const os = require("os")
 const PORTS = []
 
 const DEFAULT_PORT = 8000
+const TOP_PORT = 65535
 let MAX_PORT = 65535
 
 // 检查指定端口是否被占用
@@ -80,8 +81,10 @@ async function choosePort(userPort, limit) {
     }
 
     const port = await checkPorts(hosts)
+    MAX_PORT = TOP_PORT
     return port
   } catch (err) {
+    MAX_PORT = TOP_PORT
     throw err
   }
 }
