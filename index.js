@@ -67,10 +67,10 @@ async function checkPorts(hosts) {
 async function choosePort(userPort, limit) {
   try {
     const networks = os.networkInterfaces()
-    let hosts = []
+    let hosts = new Set([undefined, "0.0.0.0"])
     Object.keys(networks).map((k) => {
       networks[k].forEach((item) => {
-        hosts.push(item.address)
+        hosts.add(item.address)
       })
     })
 
